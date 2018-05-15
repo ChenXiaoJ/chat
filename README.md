@@ -3,6 +3,9 @@
 測試
 嗯嗯那
 
+npm run deploy:production
+```
+
 Redis:
 -----------------
 `cd /etc/redis & redis production.conf`
@@ -14,3 +17,7 @@ restart redis:
   redis-server production.conf  // [ 启动redis ]
 
   或 redis-cli shutdown  // [ 用auth登录客户端关闭 ]
+
+Logs:
+------------------
+Logs in the prod and staging are located in ~/dev/log/passenger.log。 `tail -f ~/dev/log/passenger.log` to view the log in the real time
