@@ -3,6 +3,19 @@
 測試
 嗯嗯那
 
+Deploy server:
+-----------------
+
+deploy to staging
+```
+npm run deploy:staging
+```
+
+deploy to production
+```
+npm run deploy:production
+```
+
 npm run deploy:production
 ```
 
