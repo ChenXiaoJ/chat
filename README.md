@@ -22,3 +22,51 @@
 	4、团、订单 (referral和order表)：
 		isVirtual表示是否虚拟 [false不是，true是]
 	
+Install packages:
+-----------------
+```
+npm install
+```
+
+Setup dependencies:
+-----------------
+
+/media/get-video needs electron to work
+electron needs xvfb on ubuntu
+```
+apt-get install -y libgtk2.0-0 libgconf-2-4 libasound2 libxtst6 libxss1 libnss3 xvfb
+#安装ImageMagick
+brew install ImageMagick
+
+# 每次开机时运行下面2行，为了chrome能正常运行，设立一个虚拟的屏幕
+
+Xvfb -ac -screen scrn 1280x2000x24 :9.0 & # add to startup
+export DISPLAY=:9.0 # add to service env
+```
+
+Environment Setup:
+-----------------
+depends environment setting in
+https://github.com/PalmDrive/ainterest_service/wiki/Get-started
+
+
+Deploy server:
+-----------------
+
+deploy to staging
+```
+npm run deploy:staging
+```
+
+deploy to production
+```
+npm run deploy:production
+```
+
+
+项目发布:
+-----------------
+./deploy/run.sh 分支名称 pm2项目名称
+```
+eg: ./deploy/run.sh master test
+```
